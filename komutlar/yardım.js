@@ -5,7 +5,7 @@ var prefix = ayarlar.prefix;
 
 exports.run = async(client, message, args) => {
 
-        const jkood = new Discord.MessageEmbed()
+        const embed = new Discord.MessageEmbed()
 .setAuthor(` Guard Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setImage('')
@@ -46,7 +46,7 @@ exports.run = async(client, message, args) => {
 :detective:**${prefix}ping    **`)      
  .setFooter(`${message.author.username} Tarafından istendi.`, message.author.avatarURL())
     
-        return message.channel.send(jkood);
+        return message.channel.send(embed);
 }
 
 exports.conf = {
